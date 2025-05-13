@@ -17,6 +17,8 @@ export default function Index() {
 
       {/* Use Link From remix run react for SPA */}
       <Link to="/demo" className="text-blue-600">Demo Page</Link>
+      <br />
+      <Link to="/notes" className="text-blue-600">Notes Page</Link>
     </>
   );
 }

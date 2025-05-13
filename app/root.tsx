@@ -6,14 +6,17 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
 import "./tailwind.css";
+//! You can import style like this
+import "~/Styles/Global.css";
+import "~/Styles/Media.css";
+import Mainnavigation from "./pages/Mainnavigation/Mainnavigation";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
-    href: "https://fonts.gstatic.com",
+    href: "https://fonts`.gstatic.com",
     crossOrigin: "anonymous",
   },
   {
@@ -32,6 +35,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <header>
+          <Mainnavigation />
+        </header>
         {children}
         <ScrollRestoration />
         <Scripts />
